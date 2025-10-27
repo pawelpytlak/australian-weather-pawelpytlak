@@ -18,7 +18,8 @@ df %>%
   geom_point(color = "red") + 
   labs(title = 'Sydney') + 
   theme_minimal() + 
-  labs(caption = "Copyright by the Australian Commonwealth Bureau of Meteorology")
+  labs(caption = "Copyright by the Australian Commonwealth Bureau of Meteorology") + 
+  facet_wrap(~WindDir9am)
 
 # Save the plot in graphics/
 ggsave(filename = "graphics/scatter-temp-humidity.png", plot = scatter_plot)
