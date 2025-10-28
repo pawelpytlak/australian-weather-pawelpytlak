@@ -9,14 +9,15 @@ df = read_csv("data/weatherAUS.csv")
 # Create a scatter plot of Humidity9am and Temp9am
 # a location
 
-city = "Sydney"
+# city = "Sydney"
+city = "GoldCoast"
 
 scatter_plot = 
 df %>%
   filter(Location == city) %>%
   ggplot(aes(x = Temp9am, y = Humidity9am)) + 
   geom_point(color = "yellow") + 
-  labs(title = 'Sydney') + 
+  labs(title = 'GoldCoast') + 
   theme_minimal() + 
   labs(caption = "Copyright by the Australian Commonwealth Bureau of Meteorology") + 
   facet_wrap(~WindDir9am)
